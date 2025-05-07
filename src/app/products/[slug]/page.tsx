@@ -84,14 +84,14 @@ export default function ProductPage() {
 
           {/* Product Details */}
           <motion.div 
-            className="space-y-8"
+            className="space-y-2 md:space-y-8"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div>
               <motion.h1 
-                className="text-5xl font-bold mb-2 tracking-tight"
+                className="text-2xl md:text-5xl font-bold mb-2 tracking-tight"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
@@ -99,7 +99,7 @@ export default function ProductPage() {
                 Essential Cotton T-Shirt
               </motion.h1>
               <motion.p 
-                className="text-2xl font-light text-gray-500"
+                className="text-xl md:text-2xl font-light text-gray-500"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -116,14 +116,14 @@ export default function ProductPage() {
             >
               <div className="flex">
                 {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-6 h-6 fill-yellow-400 stroke-yellow-400" />
+                  <Star key={star} className="w-4 h-6 md:w-6 md:h-6 fill-yellow-400 stroke-yellow-400" />
                 ))}
               </div>
               <span className="text-lg font-medium text-gray-500">(125 reviews)</span>
             </motion.div>
 
             <motion.p 
-              className="text-4xl font-bold"
+              className="text-4xl font-bold mt-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -132,7 +132,7 @@ export default function ProductPage() {
             </motion.p>
 
             <motion.p 
-              className="text-xl text-gray-600 leading-relaxed mb-8"
+              className="text-base md:text-xl text-gray-600 leading-relaxed mb-8 mt-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.7 }}
@@ -194,12 +194,12 @@ export default function ProductPage() {
                 transition={{ duration: 0.4 }}
                 className="space-y-6"
               >
-                <p className="text-gray-700 text-lg leading-relaxed">
+                <p className="text-gray-700 text-base md:text-lg leading-relaxed m-2">
                   Our Premium Drink Bottle is designed with both style and functionality in mind. The double-wall vacuum
                   insulation keeps your drinks cold for up to 24 hours or hot for up to 12 hours. The sleek, modern
                   design fits comfortably in your hand and looks great on your desk or in your gym bag.
                 </p>
-                <ul className="list-disc pl-5 mt-4 space-y-2 text-gray-700">
+                <ul className="list-disc pl-5 text-base md:text-lg mt-4 space-y-2 text-gray-700 m-2">
                   <li>Made from high-quality, BPA-free stainless steel</li>
                   <li>Leak-proof lid with convenient carry loop</li>
                   <li>Wide mouth for easy filling and cleaning</li>
@@ -216,36 +216,8 @@ export default function ProductPage() {
                 transition={{ duration: 0.4 }}
                 className="space-y-8"
               >
-                {/* Add a review section */}
-                <div className="bg-gray-50 p-6 rounded-xl mb-8">
-                  <h3 className="text-xl font-semibold mb-4">Write a Review</h3>
-                  <div className="space-y-4">
-                    <div>
-                      <Label>Rating</Label>
-                      <div className="flex mt-1">
-                        {[1, 2, 3, 4, 5].map((star) => (
-                          <Star 
-                            key={star} 
-                            className={`w-6 h-6 cursor-pointer transition-colors duration-200 ${
-                              star <= (hoveredRating || userRating) ? "fill-yellow-400 stroke-yellow-400" : "stroke-gray-300"
-                            }`}
-                            onMouseEnter={() => setHoveredRating(star)}
-                            onMouseLeave={() => setHoveredRating(0)}
-                            onClick={() => handleRatingClick(star)}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <Label htmlFor="review">Your Review</Label>
-                      <Textarea id="review" placeholder="Share your thoughts about this product" className="mt-1" rows={4} />
-                    </div>
-                    <Button className="bg-black hover:bg-gray-800">Submit Review</Button>
-                  </div>
-                </div>
-                
                 {/* Existing reviews */}
-                <div className="space-y-6">
+                <div className="space-y-6 m-2">
                   <h3 className="text-xl font-semibold mb-4">Customer Reviews</h3>
                   
                   <div className="space-y-6">
@@ -289,6 +261,34 @@ export default function ProductPage() {
                     </div>
                   </div>
                 </div>
+
+                {/* Add a review section */}
+                <div className="bg-gray-50 rounded-xl mb-8 m-2 mt-4">
+                  <h3 className="text-xl font-semibold mb-4">Write a Review</h3>
+                  <div className="space-y-4">
+                    <div>
+                      <Label>Rating</Label>
+                      <div className="flex mt-1">
+                        {[1, 2, 3, 4, 5].map((star) => (
+                          <Star 
+                            key={star} 
+                            className={`w-6 h-6 cursor-pointer transition-colors duration-200 ${
+                              star <= (hoveredRating || userRating) ? "fill-yellow-400 stroke-yellow-400" : "stroke-gray-300"
+                            }`}
+                            onMouseEnter={() => setHoveredRating(star)}
+                            onMouseLeave={() => setHoveredRating(0)}
+                            onClick={() => handleRatingClick(star)}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <Label htmlFor="review">Your Review</Label>
+                      <Textarea id="review" placeholder="Share your thoughts about this product" className="mt-1" rows={4} />
+                    </div>
+                    <Button className="bg-black hover:bg-gray-800">Submit Review</Button>
+                  </div>
+                </div>
               </motion.div>
             </TabsContent>
           </Tabs>
@@ -296,7 +296,7 @@ export default function ProductPage() {
         
         {/* You May Also Like Section */}
         <motion.div 
-          className="mt-24"
+          className="mt-24 mb-20"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}

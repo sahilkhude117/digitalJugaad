@@ -25,7 +25,7 @@ export default function ProductCard({ product, viewType = 'grid' }: ProductCardP
   return isGridView ? (
     <motion.div
       whileHover={{ y: -5, transition: { duration: 0.2 } }}
-      className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full border border-gray-100 mr-10 ml-10 sm:mr-0 sm:ml-0 "
+      className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full border border-gray-100 sm:mr-0 sm:ml-0 "
     >
       <div className="relative sm:h-56 overflow-hidden">
         <img

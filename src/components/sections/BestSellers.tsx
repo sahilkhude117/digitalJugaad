@@ -61,7 +61,7 @@ const BestSellers: React.FC = () => {
         className="w-full"
         onValueChange={handleTabChange}
       >
-        <TabsList className="mb-6 w-full justify-start gap-4 rounded-none bg-transparent h-auto pb-2">
+        <TabsList className="md:mb-6 w-full justify-start gap-4 rounded-none bg-transparent h-auto pb-2">
           {categories.map((category, index) => (
             <motion.div
               key={category.id}
@@ -72,7 +72,7 @@ const BestSellers: React.FC = () => {
             >
               <TabsTrigger 
                 value={category.id}
-                className="relative px-6 py-3 text-lg rounded-lg overflow-hidden 
+                className="relative px-4 py-2 md:px-6 md:py-3 text-lg rounded-lg overflow-hidden 
                 data-[state=active]:text-white data-[state=active]:bg-black hover:bg-black hover:text-white
                 transition-colors duration-300 z-10 cursor-pointer group"
               > 
