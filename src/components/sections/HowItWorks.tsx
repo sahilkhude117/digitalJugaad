@@ -5,7 +5,7 @@ import { Badge } from "../ui/badge";
 
 export const HowItWorks = () => {
     return (
-        <section className="w-full py-20 md:py-32 bg-muted/30 relative overflow-hidden">
+        <section id="how-it-works" className="w-full py-20 md:py-32 bg-muted/30 relative overflow-hidden">
           <div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-black bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_40%,transparent_100%)]"></div>
 
           <div className="container px-4 md:px-6 relative">
@@ -31,18 +31,18 @@ export const HowItWorks = () => {
               {[
                 {
                   step: "01",
-                  title: "Create Account",
-                  description: "Sign up in seconds with just your email. No credit card required to get started.",
+                  title: "Choose Product",
+                  description: "Browse and Choose your required product.",
                 },
                 {
                   step: "02",
-                  title: "Configure Workspace",
-                  description: "Customize your workspace to match your team's unique workflow and requirements.",
+                  title: "Get Product",
+                  description: "Pay and Instant Pdf",
                 },
                 {
                   step: "03",
                   title: "Boost Productivity",
-                  description: "Start using our powerful features to streamline processes and achieve your goals.",
+                  description: "Start using our products however you want",
                 },
               ].map((step, i) => (
                 <motion.div
