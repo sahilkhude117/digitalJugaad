@@ -40,28 +40,28 @@ export const Navbar = () => {
         <div className="container flex h-16 items-center justify-between">
             <div className="flex items-center gap-2 font-bold">
             <div className="size-8 rounded-lg bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-primary-foreground">
-                S
+                DJ
             </div>
-            <span>SaaSify</span>
+            <span>Digital Jugaad</span>
             </div>
             <nav className="hidden md:flex gap-8">
             <Link
-                href="#features"
+                href="/products"
                 className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
-                Features
+                Products
             </Link>
             <Link
-                href="#testimonials"
+                href="#best-sellers"
                 className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
-                Testimonials
+                Best Sellers
             </Link>
             <Link
-                href="#pricing"
+                href="#how-it-works"
                 className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
-                Pricing
+                How it works
             </Link>
             <Link
                 href="#faq"
@@ -71,12 +71,6 @@ export const Navbar = () => {
             </Link>
             </nav>
             <div className="hidden md:flex gap-4 items-center">
-            <Link
-                href="#"
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-                Log in
-            </Link>
             <Button className="rounded-full">
                 Get Started
                 <ChevronRight className="ml-1 size-4" />
@@ -95,25 +89,22 @@ export const Navbar = () => {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="md:hidden absolute top-16 inset-x-0 bg-background/95 backdrop-blur-lg border-b"
+                className="md:hidden absolute top-16 inset-x-0 bg-background/95 backdrop-blur-lg border-b m-2"
             >
-            <div className="container py-4 flex flex-col gap-4">
-                <Link href="#features" className="py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>
-                Features
+            <div className="container py-4 flex flex-col gap-4 ">
+                <Link href="/products" className="py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>
+                Products
                 </Link>
-                <Link href="#testimonials" className="py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>
-                Testimonials
+                <Link href="#best-sellers" className="py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>
+                Best Sellers
                 </Link>
-                <Link href="#pricing" className="py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>
-                Pricing
+                <Link href="#how-it-works" className="py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>
+                How it works
                 </Link>
                 <Link href="#faq" className="py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>
                 FAQ
                 </Link>
                 <div className="flex flex-col gap-2 pt-2 border-t">
-                <Link href="#" className="py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>
-                    Log in
-                </Link>
                 <Button className="rounded-full">
                     Get Started
                     <ChevronRight className="ml-1 size-4" />
