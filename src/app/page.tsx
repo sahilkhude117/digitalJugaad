@@ -12,7 +12,7 @@ export default function LandingPage() {
   return (
     <div className="flex min-h-[100dvh] flex-col">
       <Navbar/>
-      <main className="flex-1">
+      <main className="flex-1 relative z-10">
         <HeroSection/>
         <BestSellers/>
 
@@ -20,7 +20,7 @@ export default function LandingPage() {
         <HowItWorks/>
 
         {/* Testimonials Section */}
-        <Testimonials/>
+        {/* <Testimonials/> */}
 
         {/* FAQ Section */}
         <FAQSection/>
