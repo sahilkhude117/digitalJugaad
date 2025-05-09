@@ -8,14 +8,14 @@ export const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-2 font-bold">
                 <div className="size-8 rounded-lg bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-primary-foreground">
-                  S
+                  DJ
                 </div>
-                <span>SaaSify</span>
+                <span>Digital Jugaad</span>
               </div>
               <p className="text-sm text-muted-foreground">
-                Streamline your workflow with our all-in-one SaaS platform. Boost productivity and scale your business.
+                Your one-stop shop for affordable digital products at just Rs. 99.
               </p>
-              <div className="flex gap-4">
+              {/* <div className="flex gap-4">
                 <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -69,54 +69,29 @@ export const Footer = () => {
                   </svg>
                   <span className="sr-only">LinkedIn</span>
                 </Link>
-              </div>
+              </div> */}
             </div>
             <div className="space-y-4">
               <h4 className="text-sm font-bold">Product</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Features
+                  <Link href="/products" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Products
                   </Link>
                 </li>
                 <li>
-                  <Link href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Pricing
+                  <Link href="#best-sellers" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Best Sellers
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Integrations
+                  <Link href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors">
+                  How it works
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                    API
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h4 className="text-sm font-bold">Resources</h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Documentation
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Guides
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Support
+                  <Link href="#faq" className="text-muted-foreground hover:text-foreground transition-colors">
+                  FAQ
                   </Link>
                 </li>
               </ul>
@@ -125,23 +100,33 @@ export const Footer = () => {
               <h4 className="text-sm font-bold">Company</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                    About
+                  <Link href="/company/about" className="text-muted-foreground hover:text-foreground transition-colors">
+                    About Us
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Careers
+                  <Link href="/company/contact" className="text-muted-foreground hover:text-foreground transition-colors">
+                    Contact Us
                   </Link>
                 </li>
+              </ul>
+            </div>
+            <div className="space-y-4">
+              <h4 className="text-sm font-bold">Policies</h4>
+              <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <Link href="/policies/privacy" className="text-muted-foreground hover:text-foreground transition-colors">
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <Link href="/policies/tos" className="text-muted-foreground hover:text-foreground transition-colors">
                     Terms of Service
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/policies/refund" className="text-muted-foreground hover:text-foreground transition-colors">
+                    Refund Policy
                   </Link>
                 </li>
               </ul>
@@ -149,17 +134,17 @@ export const Footer = () => {
           </div>
           <div className="flex flex-col gap-4 sm:flex-row justify-between items-center border-t border-border/40 pt-8">
             <p className="text-xs text-muted-foreground">
-              &copy; {new Date().getFullYear()} SaaSify. All rights reserved.
+              &copy; {new Date().getFullYear()} Digital Jugaad. All rights reserved.
             </p>
             <div className="flex gap-4">
-              <Link href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/policies/privacy" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/policies/tos" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
                 Terms of Service
               </Link>
-              <Link href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-                Cookie Policy
+              <Link href="/policies/refund" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+                Refund Policy
               </Link>
             </div>
           </div>
